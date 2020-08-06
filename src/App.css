@@ -1,38 +1,54 @@
-.App {
+body {
+  margin: 0, auto;
   text-align: center;
+  color: white;
+  background-color: #333;
+  background-image: url(./images/pexels-retha-ferguson-3820312.jpg);
+  background-size: cover;
+  position: absolute;
+  background-repeat: no-repeat;
+  
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body > * {
+  position: relative;
+  z-index: 2;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body:after {
+  content: '';
+  position: absolute;
+  left: 0; top: 0;
+  width: 100vw; height: 100vh;
+  background: rgba(0, 0, 0, .6);
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.first-container {
+  margin-top: 8%;
+  width: 100vw;
+  text-align: center;
+  /* border: 1px solid red; */
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: space-around;
+  flex-direction: row;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.form {
+  background-color: rgb(13,103,207);
+  padding: 2%;
+  width: 25%;
+}
+.nav {
+  background-color: rgb(34, 33, 33, .4);
+}
+.nav-link {
+  /* color: white; */
+  font-size: 20px;
+  text-decoration: none;
+}
+p {
+  font-size: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+
+
+
