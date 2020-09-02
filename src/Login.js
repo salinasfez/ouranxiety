@@ -1,11 +1,14 @@
 import { Button, Form } from 'react-bootstrap';
 import React from 'react';
 import styled from 'styled-components';
+import img from './images/pexels-retha-ferguson-3820312.jpg';
+
 
 
 class Login extends React.Component {
     render(){
         return(
+            <div>
             <div className='first-container'>
             <div className='quote'>
               <h3>It's Our Anxiety, you're not alone!</h3><br></br>
@@ -16,6 +19,7 @@ class Login extends React.Component {
           </div>
           <div className='form'>
             <h4>Welcome, please sign in or continue as a guest!</h4>
+
             <Form>
                 <Form.Group controlId='username'>
                   <Form.Label>Username</Form.Label>
@@ -32,6 +36,8 @@ class Login extends React.Component {
                   Guest
                 </Button>
             </Form>
+            
+          </div>
           </div>
           </div>
         )

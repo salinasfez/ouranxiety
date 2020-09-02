@@ -2,18 +2,18 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Body = styled.body`
-    background-color: black;
-    text-align: center;
-    color: white;
-    background-image: none;
-    height: 100vh; width: 100vw;
-`;
+width: 100vw;
+height: 100vh;
+background: black;
+color: white;
+`
+
 
 class Home extends React.Component {
     render(){
         return(
            <Body>
-                <h1>This is my Home page</h1>
+                <h1 className='test'>This is my Home page</h1>
            </Body>
         )
     }

@@ -1,4 +1,4 @@
-body {
+ body {
   margin: 0, auto;
   text-align: center;
   color: white;
@@ -8,13 +8,13 @@ body {
   position: absolute;
   background-repeat: no-repeat;
   
-}
+} 
 
 body > * {
   position: relative;
   z-index: 2;
 }
-body:after {
+ body:after {
   content: '';
   position: absolute;
   left: 0; top: 0;
@@ -25,7 +25,6 @@ body:after {
   margin-top: 8%;
   width: 100vw;
   text-align: center;
-  /* border: 1px solid red; */
   display: flex;
   justify-content: space-around;
   flex-direction: row;
@@ -37,16 +36,26 @@ body:after {
   padding: 2%;
   width: 25%;
 }
-.nav {
+body.nav {
   background-color: rgb(34, 33, 33, .4);
 }
+
 .nav-link {
   /* color: white; */
   font-size: 20px;
   text-decoration: none;
 }
+.nav-link:active{
+  
+}
+.nav-link:hover{
+  border: none;
+}
 p {
   font-size: 20px;
+}
+.nav-container {
+  color: green;
 }
 
 
