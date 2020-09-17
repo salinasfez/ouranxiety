@@ -2,22 +2,33 @@ import { Button, Form } from 'react-bootstrap';
 import React from 'react';
 import styled from 'styled-components';
 import img from './images/pexels-retha-ferguson-3820312.jpg';
+import './Login.css';
 
 
 
 class Login extends React.Component {
     render(){
+      const quoteStyle = {
+          marginTop: '10%',
+          color: 'white'
+        }
+        const formStyle = {
+          marginTop: '10%',
+          backgroundColor: 'rgb(13,103,207)',
+          padding: '2%',
+          width: '25%',
+          height: '45%'
+        }
         return(
-            <div>
-            <div className='first-container'>
-            <div className='quote'>
-              <h3>It's Our Anxiety, you're not alone!</h3><br></br>
-              <p>
-                "If the ocean can calm itself, so can you. We are both salt water mixed with air."<br></br><br></br>
-                -Nayyirah Waheed
-              </p> 
-          </div>
-          <div className='form'>
+            <div className='login'>
+              <div style={quoteStyle}>
+                <h3>It's Our Anxiety, you're not alone!</h3><br></br>
+                <p>
+                  "If the ocean can calm itself, so can you. We are both salt water mixed with air."<br></br><br></br>
+                  -Nayyirah Waheed
+                </p> 
+              </div>
+          <div style={formStyle}>
             <h4>Welcome, please sign in or continue as a guest!</h4>
 
             <Form>
@@ -36,10 +47,8 @@ class Login extends React.Component {
                   Guest
                 </Button>
             </Form>
-            
           </div>
-          </div>
-          </div>
+      </div>
         )
     }
 }

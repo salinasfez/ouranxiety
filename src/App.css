@@ -1,63 +1,8 @@
- body {
-  margin: 0, auto;
-  text-align: center;
-  color: white;
-  background-color: #333;
-  background-image: url(./images/pexels-retha-ferguson-3820312.jpg);
-  background-size: cover;
-  position: absolute;
-  background-repeat: no-repeat;
-  
-} 
-
-body > * {
-  position: relative;
-  z-index: 2;
-}
- body:after {
-  content: '';
-  position: absolute;
-  left: 0; top: 0;
-  width: 100vw; height: 100vh;
-  background: rgba(0, 0, 0, .6);
-}
-.first-container {
-  margin-top: 8%;
-  width: 100vw;
-  text-align: center;
-  display: flex;
-  justify-content: space-around;
-  flex-direction: row;
-  color: white;
-}
-
-.form {
-  background-color: rgb(13,103,207);
-  padding: 2%;
-  width: 25%;
-}
-body.nav {
-  background-color: rgb(34, 33, 33, .4);
-}
-
 .nav-link {
-  /* color: white; */
-  font-size: 20px;
-  text-decoration: none;
+  color: rgb(13,103,207);
+  border: 1px solid red;
 }
-.nav-link:active{
-  
+.nav-link:hover {
+background-color: rgb(13,103,207);
+color: white;
 }
-.nav-link:hover{
-  border: none;
-}
-p {
-  font-size: 20px;
-}
-.nav-container {
-  color: green;
-}
-
-
-
-
