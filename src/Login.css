@@ -8,5 +8,19 @@
     border-top: 3px solid rgb(13,103,207);
     
 }
-
+.featuredContainer {
+    height: 50vh;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    
+}
+.firstFeaturedStory {
+    border: 1px solid red;
+    width: 40%;
+}
+.secondFeaturedStory {
+    border: 1px solid blue;
+    width: 40%;
+}
 

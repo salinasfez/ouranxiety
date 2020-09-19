@@ -3,10 +3,22 @@ import React from 'react';
 import styled from 'styled-components';
 import img from './images/pexels-retha-ferguson-3820312.jpg';
 import './Login.css';
+import Create from './Create';
 
 
 
 class Login extends React.Component {
+    state = {
+      isLoggedIn: true
+    }
+    toggleLogin = () => {
+      const afterLoginPage = this.state.isLoggedIn;
+      this.setState({
+        isLoggedIn: !afterLoginPage
+      })
+      
+    
+    }
     render(){
       const quoteStyle = {
           marginTop: '10%',
@@ -17,9 +29,12 @@ class Login extends React.Component {
           backgroundColor: 'rgb(13,103,207)',
           padding: '2%',
           width: '25%',
-          height: '45%'
+          height: '45%',
+          borderRadius: '1em'
         }
         return(
+            <div>
+              {this.state.isLoggedIn ? 
             <div className='login'>
               <div style={quoteStyle}>
                 <h3>It's Our Anxiety, you're not alone!</h3><br></br>
@@ -40,7 +55,7 @@ class Login extends React.Component {
                   <Form.Label>Passcode</Form.Label>
                   <Form.Control type='text' placeholder='passcode'/>
                 </Form.Group>
-                <Button className='button' variant='light' type='submit'>
+                <Button className='button' variant='light' type='submit' onClick={this.toggleLogin}>
                   Log In
                 </Button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <Button className='button' variant='light' type='button'>
@@ -48,6 +63,19 @@ class Login extends React.Component {
                 </Button>
             </Form>
           </div>
+      </div>
+      :
+      <button onClick={this.toggleLogin}>Log Out</button>}
+      <p>This my logged in page</p>
+      <div className="featuredContainer">
+          <div className='firstFeaturedStory'>
+                el capitan se moria de miedo por que era cobarde
+                el capitan se moria de miedo por que era cobarde 
+          </div>
+          <div className='secondFeaturedStory'>
+              el capitan se moria de miedo por que era cobarde el man
+          </div>
+      </div>
       </div>
         )
     }
