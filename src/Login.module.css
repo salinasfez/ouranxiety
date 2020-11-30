@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap');
+
+.Login {
+    background-image: url(./images/pexels-retha-ferguson-3820312.jpg);
+    height: 100vh;
+    background-size: cover;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    border-top: 3px solid rgb(13,103,207);
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-weight: bold;
+}
+.Quote {
+    color: white;
+    height: 25%;
+    margin-top: 15%;
+    font-size: 25px;
+}
+.Buttons {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    margin-top: 8%;
+}
+.Form {
+    color: white;
+    margin-top: 10%;
+    background-color: rgb(13,103,207);
+    padding: 2%;
+    width: 25%;
+    height: 45%;
+    border-radius: 1em;
+}

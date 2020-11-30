@@ -1,14 +1,31 @@
-import React from 'react';
+
+import {connect} from 'react-redux';
+import React, { Component } from 'react';
+
+import Counter from './containers/Counter/Counter';
 
 
-class Stories extends React.Component {
+
+class Stories extends Component {
+   
     render(){
+        
         return(
             <div>
-                this will be my stories page
+               <Counter />
             </div>
         )
     }
 }
+const mapStateToProps = state => {
+    return {
+        
+    }
+}
+const mapDispatchToProps = dispatch => {
+    return {
+        
+    }
+}
 
-export default Stories;
+export default connect(mapStateToProps, mapDispatchToProps)(Stories);
