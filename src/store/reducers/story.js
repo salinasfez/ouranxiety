@@ -3,7 +3,9 @@ import * as actionTypes from '../actions/actionTypes';
 
 const initialState = {
     story: {},
-    id: ''
+    id: '',
+    title: '',
+    body: ''
 }
 
 export const reducer = (state = initialState, action) => {
@@ -14,7 +16,9 @@ export const reducer = (state = initialState, action) => {
             return {
                 ...state,
                 story: action.story,
-                id: action.id
+                id: action.story.id,
+                title: action.story.title,
+                body: action.story.body
             }
         case actionTypes.FETCH_STORY_FAIL:
             return {

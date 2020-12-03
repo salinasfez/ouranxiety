@@ -26,9 +26,7 @@ export const fetchStory = (id) => {
         dispatch(fetchStoryStart());
         axios.get('http://localhost:3000/stories/' + id)
         .then(res => {
-            console.log('single story', res.data);
-         
-            
+            // console.log('single story', res.data);
             dispatch(fetchStorySuccess(res.data))
             }
         )

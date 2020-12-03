@@ -26,7 +26,7 @@ class App extends React.Component {
           <Route exact path='/' component={Login}/>
           <Route exact path='/create' component={Create}/>
           <Route exact path='/stories' component={Stories}/>
-          <Route  path='stories/:id' component={Story}/>
+          <Route  exact path='/stories/:id' component={Story}/>
           <Route exact path='/resources' component={Resources}/>
           <Route exact path='/myprofile' component={MyProfile}/>
 
