@@ -9,13 +9,17 @@ import { Provider } from 'react-redux';
 import { createStore, applyMiddleware, compose, combineReducers } from 'redux';
 import counterReducer from './store/reducers/counter';
 import resultReducer from './store/reducers/result';
+import storiesReducer from './store/reducers/stories';
+import storyReducer from './store/reducers/story';
 
 
 const composeEnhancers = process.env.NODE_ENV === 'development' ? window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ : null || compose;
 
 const rootReducer = combineReducers({
   ctr: counterReducer,
-  res: resultReducer
+  res: resultReducer,
+  stories: storiesReducer,
+  story: storyReducer
 });
 
 const store = createStore(rootReducer, composeEnhancers(

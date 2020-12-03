@@ -8,3 +8,10 @@ export {
     storeResult,
     deleteResult
 } from './result';
+
+export {
+    fetchStories
+} from './stories';
+export {
+    fetchStory
+} from './story';

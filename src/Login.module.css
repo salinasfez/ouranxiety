@@ -3,6 +3,8 @@
 .Login {
     background-image: url(./images/pexels-retha-ferguson-3820312.jpg);
     height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
     background-size: cover;
     display: flex;
     justify-content: space-around;

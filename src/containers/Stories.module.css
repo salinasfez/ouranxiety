@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap');
+.MainContainer {
+    border-top: 3px solid rgb(13,103,207);
+}
+.Stories {
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-weight: bold;
+    width: 90%;
+}
+.ImageContainer img {
+    width: 80%;
+}
+.ContentBody {
+    width: 80%;
+    margin-left: 10%;
+}
+.Quote {
+    width: 80%;
+    text-align: center;
+    /* top, right, bottom, left */
+    margin: 5% 0 5% 10%;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-weight: bold;
+    
+}
+.Quote h4 {
+    text-align: right;
+    margin-right: 15%;
+}
