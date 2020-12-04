@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import {Route, NavLink, Link} from 'react-router-dom';
+import {Route, NavLink, Link, withRouter} from 'react-router-dom';
 import Login from './Login.js';
 import Create from './Create.js';
 import Stories from '../src/containers/Stories';
@@ -8,6 +8,7 @@ import Resources from './Resources';
 import MyProfile from './MyProfile';
 import { Nav } from 'react-bootstrap';
 import Story from './components/Story/Story';
+
 
 class App extends React.Component {
  
@@ -27,6 +28,7 @@ class App extends React.Component {
           <Route exact path='/create' component={Create}/>
           <Route exact path='/stories' component={Stories}/>
           <Route  exact path='/stories/:id' component={Story}/>
+          {/* <Route path={this.props.match.url + '/:id'} exact component={Story} /> */}
           <Route exact path='/resources' component={Resources}/>
           <Route exact path='/myprofile' component={MyProfile}/>
 
@@ -35,4 +37,4 @@ class App extends React.Component {
     )
   }
 }
-export default App;
+export default withRouter(App);

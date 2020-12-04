@@ -37,10 +37,11 @@ class Stories extends Component {
                                 <p>Image by: <a target='_blank' rel="noopener noreferrer" href='https://www.pexels.com/@jersy?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels'>Jessica Ticozzelli</a></p>
                             </div>
                             <NavLink to={`/stories/${story.id}`}>
-                                    <button onClick={() => this.props.onFetchStory(story.id)} type="button" className="btn btn-outline-secondary">
+                                    <button  type="button" className="btn btn-outline-secondary">
                                     Read Story
                                 </button>
                             </NavLink>
+                            {/* onClick={() => this.props.onFetchStory(story.id)} */}
                         </div>
                     )
                 })}
@@ -57,8 +58,8 @@ const mapStateToProps = state => {
 }
 const mapDispatchToProps = dispatch => {
     return {
-        onFetchStories: () => dispatch(actions.fetchStories()),
-        onFetchStory: (id) => dispatch(actions.fetchStory(id))
+        onFetchStories: () => dispatch(actions.fetchStories())
+        // onFetchStory: (id) => dispatch(actions.fetchStory(id))
     }
 }
 

@@ -3,9 +3,12 @@ import {connect} from 'react-redux';
 import * as actions from '../../store/actions/index';
 
 
+
 class Story extends Component {
     componentDidMount(){
-        this.props.onFetchStory()
+        // console.log(this.props);
+        // console.log('trying to find id', this.props.match.params.id)
+        this.props.onFetchStory(this.props.match.params.id);
     }
     render(){
         return(
