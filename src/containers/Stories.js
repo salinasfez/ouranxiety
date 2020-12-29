@@ -14,9 +14,9 @@ class Stories extends Component {
    }
 
     render(){
-        let monthCreated = new Date().getMonth() 
-        let dayCreated = new Date().getDate() 
-        let yearCreated =  new Date().getFullYear();
+        // let monthCreated = new Date().getMonth() 
+        // let dayCreated = new Date().getDate() 
+        // let yearCreated =  new Date().getFullYear();
         return(
             <div className={classes.MainContainer}>
                 <div className={classes.Quote}>
@@ -26,11 +26,11 @@ class Stories extends Component {
                 <div className={classes.Stories}>
                 {this.props.stories.map((story, index) => {
                     return (
-                        <div key={story.id}>
+                        <div key={story.id} className={classes.FlexItem}>
                             <h1>{story.title}</h1>
                             <h4>{story.description}</h4>
                             <h6>Author: {story.author}</h6>
-                            <h6>Created: {monthCreated}/{dayCreated}/{yearCreated}</h6>
+                            <h6>Created: {story.created_at}</h6>
                             {/* <Images /> */}
                             <div className={classes.ImageContainer}>
                                 <img src={require('../images/pexels-jessica-ticozzelli-5670759.jpg')} alt=''/>

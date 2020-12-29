@@ -9,7 +9,7 @@
     display: flex;
     justify-content: space-around;
     flex-direction: row;
-    border-top: 3px solid rgb(13,103,207);
+    border-top: 2px solid rgb(13,103,207);
     font-family: 'Open Sans Condensed', sans-serif;
     font-weight: bold;
 }

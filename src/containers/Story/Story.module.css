@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap');
+
+.Story {
+    border-top: 1px solid  rgb(13,103,207);
+}
+.Body {
+    margin: 0 auto;
+    text-align: center;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-weight: bold;
+    width: 90%;
+    margin-top: 5%;
+}
+
+.ImageContainer {
+    width: 80%;
+}
+.ImageContainer img{
+    width: 100%;
+    margin-left: 13%;
+}
+.PhotographerCredit {
+    margin-left: 30%;
+}

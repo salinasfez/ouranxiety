@@ -2,12 +2,12 @@ import React from 'react';
 import './App.css';
 import {Route, NavLink, Link, withRouter} from 'react-router-dom';
 import Login from './Login.js';
-import Create from './Create.js';
+import Create from '../src/containers/CreateStory/CreateStory';
 import Stories from '../src/containers/Stories';
 import Resources from './Resources';
 import MyProfile from './MyProfile';
 import { Nav } from 'react-bootstrap';
-import Story from './components/Story/Story';
+import Story from '../src/containers/Story/Story';
 
 
 class App extends React.Component {

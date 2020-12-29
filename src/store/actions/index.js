@@ -15,3 +15,9 @@ export {
 export {
     fetchStory
 } from './story';
+export  {
+    postStory
+} from './createNewStory';
+export {
+    deleteStory
+} from './deleteStory';

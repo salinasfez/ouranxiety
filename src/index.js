@@ -11,15 +11,21 @@ import counterReducer from './store/reducers/counter';
 import resultReducer from './store/reducers/result';
 import storiesReducer from './store/reducers/stories';
 import storyReducer from './store/reducers/story';
+import createNewStoryReducer from './store/reducers/createNewStory';
+import deleteStoryReducer from './store/reducers/deleteStory';
 
 
-const composeEnhancers = process.env.NODE_ENV === 'development' ? window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ : null || compose;
+// const composeEnhancers = process.env.NODE_ENV === 'development' ? window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ : null || compose;
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+
 
 const rootReducer = combineReducers({
   ctr: counterReducer,
   res: resultReducer,
   stories: storiesReducer,
-  story: storyReducer
+  story: storyReducer,
+  create: createNewStoryReducer,
+  delete: deleteStoryReducer
 });
 
 const store = createStore(rootReducer, composeEnhancers(
