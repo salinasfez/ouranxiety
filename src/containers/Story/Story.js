@@ -28,7 +28,7 @@ class Story extends Component {
                     </div>
                     <p>{this.props.story.body}</p>
                 <NavLink to={'/stories'}>
-                            <button onClick={() => this.props.onDeleteStory(this.props.match.params.id)} type="button" className="btn btn-danger">
+                            <button onClick={(id, index) => this.props.onDeleteStory(this.props.match.params.id, index)} type="button" className="btn btn-danger">
                                     Delete Story
                             </button>
                 </NavLink>

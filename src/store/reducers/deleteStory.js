@@ -11,10 +11,21 @@ const reducer = (state = initialState, action, index) => {
             ...state
         }
         case actionTypes.DELETE_STORY_SUCCESS:
-            return {
-                ...state,
-                stories:  state.stories.slice(0, index).slice(index + 1)
-            }
+            // const deletedItem = state.stories.slice(0, index).slice(index + 1)
+            // return {
+            //     ...state,
+            //     id: action.id,
+            //     data: action.data,
+            //     stories:  deletedItem
+            // }
+            // return {
+            //     ...state,
+            //     stories: [...state.stories.filter(story => story !== action.payload)]
+            // }
+          return {
+              ...state,
+              stories: state.stories
+          }
         case actionTypes.FETCH_STORIES_FAIL:
             return {
                 ...state,

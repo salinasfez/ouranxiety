@@ -33,7 +33,7 @@ const reducer = (state = initialState, action) => {
             }
             return {
                 ...state,
-                stories: state.stories.concat(newStory),
+                stories: state.stories.concat(newStory)
             }
         case actionTypes.POST_STORY_FAIL:
             return {

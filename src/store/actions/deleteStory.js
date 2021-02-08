@@ -13,6 +13,7 @@ export const deleteStorySuccess = (id, data) => {
         type: actionTypes.DELETE_STORY_SUCCESS,
         id: id,
         data: data
+        
     };
 };
 
@@ -26,10 +27,16 @@ export const deleteStoryFail = (error) => {
 export const deleteStory = (id, data) => {
     return dispatch => {
         dispatch(deleteStoryStart());
-        axios.delete('http://localhost:3000/stories/' + id, {data: data})
-        .then(res => console.log('where is my data', id))
+        axios.delete('http://localhost:3000/stories/' + id, data)
+        // .then(res => console.log('where is my data', res.status))
         .then(res => {
-            dispatch(deleteStorySuccess(res.data))
+            dispatch(deleteStorySuccess(res.data));
+            window.onload = function() {
+                if(!window.location.hash) {
+                    window.location = window.location + '#loaded';
+                    window.location.reload();
+                }
+            };
         })
         .catch(error => { 
             dispatch(deleteStoryFail(error))
