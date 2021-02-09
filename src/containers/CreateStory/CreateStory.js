@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 import { connect } from "react-redux";
+import * as actions from '../../store/actions/index';
+
 
 
 class Create extends Component {
@@ -12,6 +14,7 @@ class Create extends Component {
     }
     componentDidMount () {
         fetch('http://localhost:3000/stories')
+        this.props.onFetchStory(this.props.match.params.id);
     }
     handleStorySubmit = (event) => {
         event.preventDefault()
@@ -41,14 +44,14 @@ class Create extends Component {
                 stories: [jsonedStory, ...this.state.stories]
             })
         }).catch(error => console.log(error));
-        this.props.history.push('/stories');
+        // this.props.history.push('/stories');
        
     }
     handleStoryChange = (event) => {
         this.setState({ [event.target.id]: event.target.value })
       }
         
-        render(){
+        render(){ 
             return(
                 <div>
                     <h1>Share your story!</h1>
@@ -72,14 +75,14 @@ class Create extends Component {
     }
 const mapStateToProps = state => {
     return {
-        
+        story: state.story.story
     }
 }
 
 
 const mapDispatchToProps = dispatch => {
     return {
-        
+        onFetchStory: (id) => dispatch(actions.fetchStory(id))
     }
 }
 
