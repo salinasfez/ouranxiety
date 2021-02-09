@@ -14,7 +14,7 @@ class Create extends Component {
     }
     componentDidMount () {
         fetch('http://localhost:3000/stories')
-        this.props.onFetchStory(this.props.match.params.id);
+        // this.props.onFetchStory(this.props.match.params.id);
     }
     handleStorySubmit = (event) => {
         event.preventDefault()
@@ -44,8 +44,9 @@ class Create extends Component {
                 stories: [jsonedStory, ...this.state.stories]
             })
         }).catch(error => console.log(error));
-        // this.props.history.push('/stories');
-       
+        this.props.history.push('/stories/' + this.props.match.params.id)
+        // this.props.history.push(`/stories/72`);
+        
     }
     handleStoryChange = (event) => {
         this.setState({ [event.target.id]: event.target.value })
@@ -66,7 +67,7 @@ class Create extends Component {
                         <h6><label>Body</label></h6>
                         <input className="form-control" type='textarea' id="body" placeholder="Start typing..." value={this.state.body} onChange={this.handleStoryChange} required/>
                         </div>
-                        <button type="submit" className="btn btn-primary mb-2">Submit</button>
+                        <button type="submit" className="btn btn-primary mb-2">Publish</button>
                     </form>
                     {this.state.title}
                 </div>
